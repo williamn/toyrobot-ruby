@@ -42,5 +42,13 @@ module ToyRobot
       rotations = turn_direction == :right ?  1 : -1
       @direction = DIRECTIONS.rotate(rotations)[index]
     end
+
+    def report
+      {
+        north: north,
+        east: east,
+        direction: direction
+      }
+    end
   end
 end
