@@ -1,38 +1,37 @@
+[![Build Status](https://travis-ci.com/williamn/toyrobot-ruby.svg?branch=master)](https://travis-ci.com/williamn/toyrobot-ruby) [![codecov](https://codecov.io/gh/williamn/toyrobot-ruby/branch/master/graph/badge.svg)](https://codecov.io/gh/williamn/toyrobot-ruby)
+
 # ToyRobot
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/toy_robot`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+The application is a simulation of a toy robot moving on a square tabletop, of dimensions 5 units x 5 units.
 
 ## Installation
 
-Add this line to your application's Gemfile:
+To use this project you'll need Ruby (tested with 2.5.3) and the gem Bundler
 
-```ruby
-gem 'toy_robot'
-```
+1. Install Brew
+    - [Linux installation](https://docs.brew.sh/Homebrew-on-Linux)
+    - [macOS installation](https://brew.sh/)
+1. Install rbenv
+1. Instal Ruby 2.5.3
 
-And then execute:
+        rbenv install 2.5.3
 
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install toy_robot
 
 ## Usage
 
-TODO: Write usage instructions here
+To execute the script with a text file to pass
 
-## Development
+    bundle exec exe/toy_robot commands.txt
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+## Testing
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+To run test
+
+    rspec spec
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/toy_robot.
+Bug reports and pull requests are welcome on GitHub at https://github.com/williamn/toyrobot-ruby.
 
 ## License
 
