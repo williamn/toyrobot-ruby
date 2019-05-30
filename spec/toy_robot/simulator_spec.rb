@@ -19,7 +19,7 @@ RSpec.describe ToyRobot::Simulator do
   end
 
   context 'when robot has been placed' do
-    let(:robot) { instance_double(ToyRobot::Robot) }
+    let(:robot) { instance_double(ToyRobot::Robot, next_move: [0, 0]) }
     before { allow(subject).to receive(:robot).and_return(robot) }
 
     it 'tells the robot to move' do
@@ -40,6 +40,18 @@ RSpec.describe ToyRobot::Simulator do
     it 'tells the robot to report' do
       expect(robot).to receive(:report) { { north: 3, east: 3, direction: 'NORTH' }}
       message = "3,3,NORTH\n"
+      expect { subject.report }.to output(message).to_stdout
+    end
+  end
+
+  context 'robot placet at table boundary' do
+    before do
+      subject.place(0, 4, 'NORTH')
+    end
+
+    it 'cannot move past the table boundary' do
+      subject.move
+      message = "0,4,NORTH\n"
       expect { subject.report }.to output(message).to_stdout
     end
   end
