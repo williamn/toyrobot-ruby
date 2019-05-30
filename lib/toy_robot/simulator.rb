@@ -24,6 +24,8 @@ module ToyRobot
 
     def report
       position = robot.report
+
+      puts "#{position[:north]},#{position[:east]},#{position[:direction]}"
     end
   end
 end
