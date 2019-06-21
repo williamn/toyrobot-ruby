@@ -9,7 +9,6 @@ before_install: gem install bundler -v 1.17.1
 addons:
   sonarcloud:
     organization: "williamn-github" # the key of the org you chose at step #3
-jdk: oraclejdk11
 script:
   # other script steps might be done before running the actual analysis
   - sonar-scanner -Dproject.settings=sonar-scanner.properties
